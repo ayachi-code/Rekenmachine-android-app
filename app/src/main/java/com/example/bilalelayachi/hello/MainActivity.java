@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     EditText getal2;
     TextView uitkomst;
 
+    int keuze = 0;
+
 
 
 
@@ -44,7 +46,28 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    public void plus(View v) {
+        keuze = 2;
+        System.out.println(keuze);
+
+    }
+
+    public void keer(View v) {
+        keuze = 4;
+        System.out.println(keuze);
+
+    }
+
+    public void min(View v) {
+        keuze = 6;
+        System.out.println(keuze);
+
+    }
+
+
     public void klik (View v) {
+
+
 
         Button submit = (Button) findViewById(R.id.submit);
         EditText getal1 = (EditText) findViewById(R.id.getal1);
@@ -52,18 +75,28 @@ public class MainActivity extends AppCompatActivity {
         TextView uitkomst = (TextView) findViewById(R.id.uitkomst);
 
 
+
+
         int waardengetal1 = Integer.parseInt(getal1.getText().toString());
         int waardengetal2 = Integer.parseInt(getal2.getText().toString());
 
-        int som = waardengetal1 + waardengetal2;
+
+        if (keuze == 2) {
+            int som = waardengetal1 + waardengetal2;
+            String u_som = Integer.toString(som);
+            uitkomst.setText(u_som);
+        } else if (keuze == 4) {
+            int som = waardengetal1 * waardengetal2;
+            String u_som = Integer.toString(som);
+            uitkomst.setText(u_som);
+        } else if (keuze == 6) {
+            int som = waardengetal1 - waardengetal2;
+            String u_som = Integer.toString(som);
+            uitkomst.setText(u_som);
+        }
 
 
-        String u_som = Integer.toString(som);
-
-        uitkomst.setText(u_som);
-
-
-        System.out.println("De waarde is " + u_som);
+        System.out.println(keuze);
 
 
     }
