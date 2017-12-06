@@ -175,4 +175,14 @@
         app:layout_constraintStart_toEndOf="@+id/submit"
         app:layout_constraintTop_toBottomOf="@+id/getal2" />
 
+    <TextView
+        android:id="@+id/keuze"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="keuze:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.193"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="32dp" />
+
 </android.support.constraint.ConstraintLayout>
